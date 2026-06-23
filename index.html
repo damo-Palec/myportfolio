@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Damodharan Panneerselvam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4F2EC;--ink:#18191A;--muted:#6A6A66;--line:#DAD7CD;
+--accent:#2c6e49;--accent-ink:#2c6e49;--max:1080px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Inter",system-ui,sans-serif;
+font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}.section{padding:72px 0}
+h1,h2,h3{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;line-height:1.1;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,6vw,4.2rem)}h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:18px}
+h3{font-size:1.15rem;margin-bottom:6px}
+.eyebrow{font-family:"Space Grotesk",sans-serif;font-size:.78rem;letter-spacing:.18em;
+text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.lead{font-size:1.2rem;color:var(--muted);max-width:42ch}
+.site-header{border-bottom:1px solid var(--line);position:sticky;top:0;
+background:var(--paper);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;
+max-width:var(--max);margin:0 auto;flex-wrap:wrap;gap:12px}
+.brand{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:1.15rem;color:var(--ink);
+border:0;background:none;cursor:pointer;letter-spacing:-.01em}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links button{background:none;border:0;cursor:pointer;font:inherit;color:var(--ink);
+font-size:.95rem;padding-bottom:3px;border-bottom:2px solid transparent}
+.nav-links button:hover{color:var(--accent)}
+.nav-links button.active{color:var(--accent);border-bottom-color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:999px;
+font-weight:500;font-size:.95rem;border:0;cursor:pointer;font-family:inherit}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.hero{padding:80px 0}
+.hero h1{margin-bottom:22px;font-size:clamp(2.1rem,4vw,3.4rem)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero-grid.no-photo{grid-template-columns:1fr}
+.hero-grid.no-photo h1{max-width:18ch}
+.hero-photo{display:flex;justify-content:center}
+.portrait{width:100%;max-width:360px;aspect-ratio:1/1;object-fit:cover;border-radius:20px;
+border:1px solid var(--line);background:#fff;box-shadow:0 18px 50px rgba(0,0,0,.10)}
+.stats .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:28px;
+border-top:1px solid var(--line);padding-top:40px}
+.stat-v{font-family:"Space Grotesk",sans-serif;font-size:2.5rem;font-weight:600;color:var(--accent);line-height:1;display:block}
+.stat-l{color:var(--muted);font-size:.95rem;margin-top:8px;display:block}
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:56px;align-items:start}
+.about-grid.no-photo{grid-template-columns:1fr}
+.about-grid.no-photo .about-text > div{max-width:60ch}
+.about-side{position:sticky;top:100px}
+.about-side .portrait{max-width:100%}
+.portrait-cap{margin-top:14px;color:var(--muted);font-size:.92rem;text-align:center}
+.hero-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:36px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+.card .num{font-family:"Space Grotesk",sans-serif;color:var(--accent);font-size:.85rem;letter-spacing:.1em}
+.form{max-width:520px;margin-top:28px;display:grid;gap:16px}
+.field{display:grid;gap:6px}.field label{font-size:.9rem;font-weight:500}
+.field input,.field textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);
+border-radius:10px;background:#fff;color:var(--ink)}
+.site-footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.9rem}
+.site-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.contact-list{display:grid;gap:14px;margin-top:28px}
+.contact-list a{font-family:"Space Grotesk",sans-serif;font-size:clamp(1.3rem,3vw,1.7rem);font-weight:500}
+.contact-list .lbl{display:block;font-family:"Inter",sans-serif;font-size:.78rem;letter-spacing:.14em;
+text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pill{font-size:.85rem;padding:6px 12px;border:1px solid var(--line);border-radius:999px;
+background:var(--paper);color:var(--ink)}
+.card.proj{cursor:pointer;display:flex;flex-direction:column}
+.cprev{color:var(--muted);margin-top:4px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.view-more{color:var(--accent);font-size:.9rem;font-weight:500;margin-top:14px}
+.modal-overlay{position:fixed;inset:0;background:rgba(20,20,20,.55);display:none;
+align-items:center;justify-content:center;padding:20px;z-index:50}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;max-width:660px;width:100%;max-height:86vh;overflow-y:auto;
+border-radius:16px;padding:40px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.modal h2{font-size:1.9rem;margin:6px 0 0}
+.modal .sec{margin-top:24px}
+.modal .sec h4{font-family:"Space Grotesk",sans-serif;font-size:.78rem;letter-spacing:.14em;
+text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.modal .sec ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.modal-close{position:absolute;top:14px;right:16px;border:0;background:none;font-size:1.9rem;
+cursor:pointer;color:var(--muted);line-height:1}
+.modal-close:hover{color:var(--ink)}
+.video-wrap{position:relative;width:100%;max-width:900px}
+.video-body{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:14px;overflow:hidden}
+.video-body iframe,.video-body video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-overlay .modal-close{top:-40px;right:0;color:#fff;font-size:2.2rem}
+.page{display:none}.page.active{display:block}
+@media(max-width:760px){
+  .hero-grid,.about-grid{grid-template-columns:1fr;gap:32px}
+  .hero-photo{order:-1}
+  .portrait{max-width:260px}
+  .about-side{position:static}
+}
+@media(max-width:600px){.nav{justify-content:center}.section{padding:56px 0}}
+</style></head><body>
+<header class="site-header"><nav class="nav">
+      <button class="brand" onclick="showPage('home')">Damodharan Panneerselvam</button>
+      <ul class="nav-links">
+        <li><button data-page="home" class="active" onclick="showPage('home')">Home</button></li>
+        <li><button data-page="about" onclick="showPage('about')">About</button></li>
+        <li><button data-page="services" onclick="showPage('services')">What I Do</button></li>
+        <li><button data-page="expertise" onclick="showPage('expertise')">Expertise</button></li>
+        <li><button data-page="work" onclick="showPage('work')">Work</button></li>
+        <li><button data-page="contact" onclick="showPage('contact')">Contact</button></li>
+      </ul></nav></header>
+<main>
+<section id="home" class="page active">
+  <div class="hero"><div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Global Head, Product Adoption &amp; Learning Experience · Chennai, India</p>
+      <h1>Driving product adoption, customer success, and business growth through scalable learning experiences.</h1>
+      <p class="lead">Learning and product enablement leader with 15+ years of experience building global learning ecosystems, product adoption strategies, digital academies, and performance-driven enablement programs that accelerate customer and employee success.</p>
+      <div class="hero-actions">
+        <button class="btn" onclick="openStory()">▶ Watch My Story</button>
+        <button class="btn btn-ghost" onclick="showPage('work')">See my work</button>
+        <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener" download>↓ Download Resume</a>
+        <button class="btn btn-ghost" onclick="showPage('contact')">Get in touch</button>
+      </div>
+    </div>
+    <div class="hero-photo"><img class="portrait" src="https://drive.google.com/thumbnail?id=19IwtJ9HOB3gcj89jzKVyV0s_7n2owGtG&amp;sz=w1000" alt="Damodharan Panneerselvam"></div>
+  </div></div>
+  <div class="section stats"><div class="wrap"><div class="stat-grid"><div class="stat"><span class="stat-v">15+</span><span class="stat-l">Years of experience</span></div><div class="stat"><span class="stat-v">Global</span><span class="stat-l">Programs &amp; teams led</span></div><div class="stat"><span class="stat-v">8</span><span class="stat-l">Flagship initiatives</span></div><div class="stat"><span class="stat-v">AI-Powered</span><span class="stat-l">Learning at scale</span></div></div></div></div>
+</section>
+<section id="services" class="page"><div class="section"><div class="wrap">
+  <p class="eyebrow">What I do</p><h1>What I'm good at.</h1>
+  <div class="grid"><article class="card"><p class="num">01</p>
+        <h3>Product Adoption Strategy</h3><p>Design and execute global adoption programs that increase product utilization and customer success.</p></article><article class="card"><p class="num">02</p>
+        <h3>Customer Education</h3><p>Build scalable learning academies, certification programs, and self-service learning ecosystems.</p></article><article class="card"><p class="num">03</p>
+        <h3>Learning Experience Design</h3><p>Create engaging learning journeys that improve knowledge transfer and performance outcomes.</p></article><article class="card"><p class="num">04</p>
+        <h3>Digital Learning Transformation</h3><p>Modernize learning ecosystems using AI, analytics, automation, and learning technologies.</p></article><article class="card"><p class="num">05</p>
+        <h3>Enablement Programs</h3><p>Develop role-based onboarding, product training, and continuous learning programs for customers and internal teams.</p></article><article class="card"><p class="num">06</p>
+        <h3>Learning Analytics</h3><p>Measure adoption, engagement, proficiency, and business impact through data-driven insights.</p></article></div>
+</div></div></section>
+<section id="expertise" class="page"><div class="section"><div class="wrap">
+  <p class="eyebrow">Expertise</p><h1>Areas of expertise.</h1>
+  <p class="lead" style="margin-top:22px;">Focus on executive competencies.</p>
+  <div class="grid"><article class="card"><h3>Strategy</h3><div class="pills"><span class="pill">Product Adoption</span><span class="pill">Customer Success Enablement</span><span class="pill">Learning Strategy</span><span class="pill">Business Alignment</span></div></article><article class="card"><h3>Leadership</h3><div class="pills"><span class="pill">Global Program Leadership</span><span class="pill">Team Leadership</span><span class="pill">Stakeholder Management</span><span class="pill">Change Management</span></div></article><article class="card"><h3>Learning &amp; Technology</h3><div class="pills"><span class="pill">Learning Experience Design</span><span class="pill">Learning Analytics</span><span class="pill">Learning Platforms</span><span class="pill">AI for Learning</span></div></article><article class="card"><h3>Business Impact</h3><div class="pills"><span class="pill">Performance Consulting</span><span class="pill">User Engagement</span><span class="pill">Product Utilization</span><span class="pill">Adoption Measurement</span></div></article></div>
+</div></div></section>
+<section id="about" class="page"><div class="section"><div class="wrap about-grid">
+  <div class="about-text">
+    <p class="eyebrow">About</p><h1>Hi, I'm Damodharan.</h1>
+    <div style="margin-top:28px;display:grid;gap:18px;"><p>I help organizations maximize product value by connecting learning, adoption, and business outcomes. Over the past 15+ years, I have led digital learning transformations, product enablement initiatives, and customer education programs across global organizations.</p><p>My expertise spans product adoption strategy, learning experience design, customer enablement, performance consulting, learning technologies, and AI-powered learning solutions. I enjoy building scalable ecosystems that help users learn faster, adopt products confidently, and achieve measurable business results.</p><p>Currently, I lead Product Adoption and Learning Experience initiatives, partnering with product, customer success, sales, and engineering teams to create impactful learning experiences that drive engagement, retention, and customer success worldwide.</p></div>
+  </div>
+  <div class="about-side"><img class="portrait" src="https://drive.google.com/thumbnail?id=19IwtJ9HOB3gcj89jzKVyV0s_7n2owGtG&amp;sz=w1000" alt="Damodharan Panneerselvam"><p class="portrait-cap">Global Head, Product Adoption &amp; Learning Experience · Chennai, India</p></div>
+</div></div></section>
+<section id="work" class="page"><div class="section"><div class="wrap">
+  <p class="eyebrow">Selected work</p><h1>A few recent projects.</h1>
+  <div class="grid"><article class="card proj" onclick="openProject(0)">
+        <p class="num">PRODUCT ADOPTION</p><h3>Global Product Adoption Framework</h3>
+        <p class="cprev">Customers were onboarding inconsistently, resulting in slower product adoption and underutilization of key features.</p>
+        <span class="view-more">View details →</span></article><article class="card proj" onclick="openProject(1)">
+        <p class="num">CUSTOMER EDUCATION</p><h3>Customer Learning Academy</h3>
+        <p class="cprev">Customers lacked a structured approach to learning the platform, leading to repeated support requests and lower engagement.</p>
+        <span class="view-more">View details →</span></article><article class="card proj" onclick="openProject(2)">
+        <p class="num">ANALYTICS</p><h3>Learning Analytics Dashboard</h3>
+        <p class="cprev">Leadership lacked visibility into learning effectiveness, adoption trends, and business outcomes.</p>
+        <span class="view-more">View details →</span></article><article class="card proj" onclick="openProject(3)">
+        <p class="num">CAREER DEVELOPMENT</p><h3>DAMSAN Career Journey Platform</h3>
+        <p class="cprev">Students and professionals lacked a structured roadmap to understand career requirements, skill gaps, and progression opportunities.</p>
+        <span class="view-more">View details →</span></article><article class="card proj" onclick="openProject(4)">
+        <p class="num">ENABLEMENT</p><h3>Product Enablement Center of Excellence</h3>
+        <p class="cprev">Product learning initiatives were being developed independently across teams, resulting in inconsistent learning experiences, duplicated efforts, and limited visibility into adoption outcomes.</p>
+        <span class="view-more">View details →</span></article><article class="card proj" onclick="openProject(5)">
+        <p class="num">DIGITAL LEARNING</p><h3>AI-Powered Learning Ecosystem</h3>
+        <p class="cprev">Traditional learning workflows required significant manual effort to create, update, and distribute learning content, making it difficult to keep pace with product changes.</p>
+        <span class="view-more">View details →</span></article><article class="card proj" onclick="openProject(6)">
+        <p class="num">LEADERSHIP</p><h3>Global Learning Transformation Program</h3>
+        <p class="cprev">Learning operations were fragmented across regions, with inconsistent processes, duplicated assets, and limited measurement of business impact.</p>
+        <span class="view-more">View details →</span></article><article class="card proj" onclick="openProject(7)">
+        <p class="num">MARITIME TECH</p><h3>Product Learning Experience Platform</h3>
+        <p class="cprev">Users of maritime SaaS products required faster onboarding and workflow mastery to realize value from complex operational systems. Existing training approaches lacked structure and role relevance.</p>
+        <span class="view-more">View details →</span></article></div></div></div></section>
+<section id="contact" class="page"><div class="section"><div class="wrap">
+  <p class="eyebrow">Contact</p><h1>Let's talk.</h1>
+  <p class="lead" style="margin-top:22px;">The best ways to reach me.</p>
+  <div class="contact-list">
+    <div><span class="lbl">Email</span><a href="mailto:damodharan.panneerselvam@gmail.com">damodharan.panneerselvam@gmail.com</a></div>
+    <div><span class="lbl">Phone</span><a href="tel:9789340621">9789340621</a></div>
+    <div><span class="lbl">LinkedIn</span><a href="https://www.linkedin.com/in/damodharan-panneerselvam-a0014056/" target="_blank" rel="noopener">www.linkedin.com/in/damodharan-panneerselvam-a0014056/</a></div>
+  </div>
+</div></div></section>
+</main>
+<footer class="site-footer"><div class="wrap"><span>© 2026 Damodharan Panneerselvam</span><span>damodharan.panneerselvam@gmail.com</span></div></footer>
+<div class="modal-overlay" id="projModal" onclick="if(event.target===this)closeProject()">
+  <div class="modal"><button class="modal-close" onclick="closeProject()" aria-label="Close">&times;</button>
+  <div id="projBody"></div></div>
+</div>
+<div class="modal-overlay video-overlay" id="storyModal" onclick="if(event.target===this)closeStory()">
+  <div class="video-wrap"><button class="modal-close" onclick="closeStory()" aria-label="Close">&times;</button>
+  <div id="storyBody" class="video-body"></div></div>
+</div>
+<script>
+var PROJECTS = [{"tag":"PRODUCT ADOPTION","title":"Global Product Adoption Framework","link":"","challenge":"Customers were onboarding inconsistently, resulting in slower product adoption and underutilization of key features.","solution":"Designed a role-based product adoption framework combining onboarding journeys, learning paths, performance support assets, and success milestones.","impact":["Improved onboarding consistency","Increased feature awareness","Reduced dependency on support teams","Accelerated time-to-value for customers"],"tech":["LMS","Knowledge Base","Product Analytics","Articulate Storyline","Walkthrough Tools"]},{"tag":"CUSTOMER EDUCATION","title":"Customer Learning Academy","link":"","challenge":"Customers lacked a structured approach to learning the platform, leading to repeated support requests and lower engagement.","solution":"Built a self-service learning academy with role-based curricula, certifications, microlearning, and searchable learning resources.","impact":["Improved customer self-sufficiency","Increased learning engagement","Reduced repetitive support requests","Enhanced customer experience"],"tech":["LMS","SCORM","Video Learning Platform","Analytics Dashboard"]},{"tag":"ANALYTICS","title":"Learning Analytics Dashboard","link":"","challenge":"Leadership lacked visibility into learning effectiveness, adoption trends, and business outcomes.","solution":"Developed executive dashboards combining learning, adoption, and engagement metrics into a unified reporting experience.","impact":["Improved decision-making","Enabled data-driven learning investments","Increased visibility of adoption trends","Better executive reporting"],"tech":["Power BI","Learning Analytics","Product Analytics","SQL","Excel"]},{"tag":"CAREER DEVELOPMENT","title":"DAMSAN Career Journey Platform","link":"","challenge":"Students and professionals lacked a structured roadmap to understand career requirements, skill gaps, and progression opportunities.","solution":"Designed a competency-based career journey platform featuring role templates, skill assessments, learning pathways, portfolio building, and career readiness tracking.","impact":["Improved career awareness","Structured learning progression","Personalized development planning","Enhanced employability readiness"],"tech":["AI","JSON Frameworks","Supabase","Learning Analytics","Career Mapping Models"]},{"tag":"ENABLEMENT","title":"Product Enablement Center of Excellence","link":"","challenge":"Product learning initiatives were being developed independently across teams, resulting in inconsistent learning experiences, duplicated efforts, and limited visibility into adoption outcomes.","solution":"Established a Product Enablement Center of Excellence (CoE) with governance frameworks, content standards, learning design guidelines, operating models, and success metrics. Created a centralized approach for onboarding, product training, and continuous enablement.","impact":["Standardized product learning across teams","Improved scalability of enablement programs","Reduced duplication of effort","Increased alignment between Product, Customer Success, and Learning teams","Enhanced visibility into adoption and learning outcomes"],"tech":["LMS Platforms","Knowledge Management Systems","Learning Analytics","Articulate Suite","AI-Assisted Content Creation Tools"]},{"tag":"DIGITAL LEARNING","title":"AI-Powered Learning Ecosystem","link":"","challenge":"Traditional learning workflows required significant manual effort to create, update, and distribute learning content, making it difficult to keep pace with product changes.","solution":"Implemented AI-assisted workflows for content creation, knowledge discovery, personalized learning recommendations, and learning support. Integrated AI tools into the learning ecosystem to accelerate content production and improve learner experiences.","impact":["Faster learning content development cycles","Improved learner access to relevant knowledge","Increased personalization of learning experiences","Enhanced scalability of learning operations","Reduced administrative effort"],"tech":["Generative AI Platforms","Learning Management Systems","Knowledge Bases","Automation Tools","Analytics Platforms"]},{"tag":"LEADERSHIP","title":"Global Learning Transformation Program","link":"","challenge":"Learning operations were fragmented across regions, with inconsistent processes, duplicated assets, and limited measurement of business impact.","solution":"Led a global transformation initiative to modernize learning operations, establish common standards, improve governance, and introduce scalable digital learning practices aligned with business objectives.","impact":["Improved operational efficiency","Increased reuse of learning assets","Enhanced learner experience consistency","Strengthened alignment between learning investments and business goals","Enabled global scalability of learning programs"],"tech":["LMS Ecosystem","Learning Analytics Platforms","Collaboration Tools","Content Authoring Tools","Project Management Platforms"]},{"tag":"MARITIME TECH","title":"Product Learning Experience Platform","link":"","challenge":"Users of maritime SaaS products required faster onboarding and workflow mastery to realize value from complex operational systems. Existing training approaches lacked structure and role relevance.","solution":"Designed and implemented a Product Learning Experience Platform featuring role-based learning journeys, workflow-driven training, performance support resources, onboarding pathways, and self-service learning experiences.","impact":["Accelerated product onboarding","Improved user proficiency and confidence","Increased product adoption and engagement","Reduced dependency on support teams","Enhanced customer success outcomes"],"tech":["Learning Management System","Product Help Center","Video Learning Platform","Articulate Storyline & Rise","Analytics & Reporting Dashboards"]}];
+var STORY = "\u003ciframe src=\"https://drive.google.com/file/d/14LAxX1drnJhUZ27D_XUt4IYpKwcjWTR8/preview\" title=\"Story\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\" allowfullscreen>\u003c/iframe>";
+function esc2(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function openProject(i){
+  var p=PROJECTS[i]; if(!p) return;
+  var h='<p class="eyebrow">'+esc2(p.tag)+'</p><h2>'+esc2(p.title)+'</h2>';
+  if(p.challenge) h+='<div class="sec"><h4>Challenge</h4><p>'+esc2(p.challenge)+'</p></div>';
+  if(p.solution) h+='<div class="sec"><h4>Solution</h4><p>'+esc2(p.solution)+'</p></div>';
+  if(p.impact&&p.impact.length) h+='<div class="sec"><h4>Impact</h4><ul>'+p.impact.map(function(x){return '<li>'+esc2(x)+'</li>';}).join('')+'</ul></div>';
+  if(p.tech&&p.tech.length) h+='<div class="sec"><h4>Technologies Used</h4><div class="pills">'+p.tech.map(function(x){return '<span class="pill">'+esc2(x)+'</span>';}).join('')+'</div></div>';
+  if(p.link) h+='<div class="sec"><a href="'+esc2(p.link)+'" target="_blank" rel="noopener">Visit project →</a></div>';
+  document.getElementById('projBody').innerHTML=h;
+  document.getElementById('projModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeProject(){
+  document.getElementById('projModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function openStory(){
+  document.getElementById('storyBody').innerHTML=STORY;
+  document.getElementById('storyModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeStory(){
+  document.getElementById('storyBody').innerHTML='';
+  document.getElementById('storyModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeProject();closeStory();}});
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-links button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script></body></html>
